@@ -19,3 +19,27 @@ Liste des groupes/Utilisateurs
 Gestion des filtres WMI 
 
 #>
+
+param (
+    #Nom de la GPO
+    [Parameter(Mandatory=$true)]
+    [string]
+    $GpoName,
+
+    #Chemin de l'unité ou du domaine
+    [Parameter(Mandatory=$true)]
+    [string]
+    $Path,
+
+    [Parameter(Mandatory=$true)]
+    [string]
+    $TemplateGPO,
+
+    [Parameter(Mandatory=$false)]
+    [array]
+    $Liste,
+
+    [Parameter(Mandatory=$false)]
+    [string]
+    $WMI
+)
